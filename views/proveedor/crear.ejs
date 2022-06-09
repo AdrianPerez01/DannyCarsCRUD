@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %> 
+</head>
+<body>
+    <%- include('../partials/nav');  %>
+
+
+<h2 class="text-center my-4">Registrar proveedor</h2>
+<div class="max-w-screen-xl px-4 py-4 mx-auto sm:px-6 lg:px-8">
+  <div class="max-w-lg mx-auto">
+ 
+      <form method="POST" action="/proveedor" class="max-w-md mx-auto mt-8 mb-0 space-y-4">
+        <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="form-group">
+                <div class="relative">
+                  <label class="block text-xs font-medium text-gray-500" for="email"> Nombre </label>
+                
+                  <input type="text" class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded" name="Nombre_Prov"" />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="relative">
+                  <label class="block text-xs font-medium text-gray-500" for="email"> Apellido</label>
+                
+                  <input type="text" class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded"  name="Apellido_Prov"" />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="relative">
+                  <label class="block text-xs font-medium text-gray-500" for="email"> Pais </label>
+                
+                  <input type="text" class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded"   name="Pais_Prov"" />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="relative">
+                  <label class="block text-xs font-medium text-gray-500" for="email"> Telefono </label>
+                
+                  <input type="text" class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded"  name="Telefono_Prov"" />
+                </div>
+              </div>
+              </div>
+              <div class="form-group mb-6">
+                <div class="relative">
+                  <label class="block text-xs font-medium text-gray-500" for="email"> Empresa </label>
+                
+                  <input type="text" class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded"  name="Nombre_Empresa_Prov"" />
+                </div>
+              </div>
+              <div class="form-group mb-6">
+                <div class="relative">
+                  <label class="block text-xs font-medium text-gray-500" for="email"> Direccion </label>
+                
+                  <input type="text" class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded"  name="Direccion_Prov"" />
+                </div>
+              </div>
+              <div class="form-group mb-6">
+                <div class="relative">
+                  <label class="block text-xs font-medium text-gray-500" for="email"> Correo </label>
+                
+                  <input type="email" class="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded"  name="Correo_Prov"" />
+                </div>
+              </div>
+              <input class=" w-1/2 px-6 py-2.5 bg-blue-600  text-white font-medium text-xs leading-tight uppercase rounded shadow-md" type="submit">        
+      </form>
+    </div>
+  </div>
+  
+     
+</body>
+</html>

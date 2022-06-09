@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %> 
+</head>
+<body>
+    <%- include ('../partials/nav') %> 
+    
+    <section class="w-full h-full text-gray-600 body-font px-12">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <% for( let articulo = 0; articulo < articulos.length; articulo++ ) { %>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img src="" alt="" srcset="<%=articulos[articulo].imagen_art%>">
+              </a>
+              <div class="mt-4">
+                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"><%=articulos[articulo].marca_Art%></h3>
+                <h2 class="text-gray-900 title-font text-lg font-medium"><%=articulos[articulo].nombre_art%></h2>
+                <p class="mt-1"><%=articulos[articulo].precio_venta_art%></p>
+              </div>
+            </div>
+            <% } %> 
+            
+          </div>
+        </div>
+    </section>
+
+      <%- include ('../partials/footer2') %> 
+</body>
+</html>

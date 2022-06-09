@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head') %> 
+</head>
+<body>
+	<%- include('../partials/nav') %> 
+	
+		<div class="max-w-screen-md px-4 py-4 mx-auto sm:px-6 lg:px-8">
+			<div class="text-center p-8 bg-gray-500 rounded-lg shadow-md lg:p-12 lg:col-span-3">
+
+				<form method="POST" action="/articulo" class="space-y-4" enctype="multipart/form-data">
+				  <label class="">Registrar Productos </label>
+					<div>
+					<input 
+					type="text" 
+					class="w-full p-3 text-sm border-gray-200 rounded-lg" 
+					placeholder="Nombre del Producto"
+					name="nombre_art"/>
+				  </div>
+		
+				  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+					<div>
+					  <input type="text"
+						class="w-full p-3 text-sm border-gray-200 rounded-lg"
+						placeholder="Codigo"
+      					name="cod_art"
+					  />
+					</div>
+		
+					<div>
+					  <input
+						class="w-full p-3 text-sm border-gray-200 rounded-lg"
+						placeholder="Marca"
+      					type="text"
+      					name="marca_Art"
+					  />
+					</div>
+				  </div>
+		
+				  <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-1">
+					<div>
+						  <select name="id_prov" id="countries" class=" border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+						  <option selected="">Elegir Proveedor</option>
+							<% for( let articulo = 0; articulo < articulos.length; articulo++ ) { %>
+							  <option value="<%=articulos[articulo].Id_Prov%>"><%=articulos[articulo].Nombre_Empresa_Prov%></option>
+							<% } %>
+
+						  </select>
+					</div>
+					<div>				
+						<input class="w-full p-3 text-sm border-gray-200 rounded-lg" 
+						placeholder="url de una Imagen"
+						type="url"
+						name="imagen_art">
+					</div>	
+					<div>
+					  <input type="text" class="w-full p-3 text-sm border-gray-200 rounded-lg" 
+						placeholder="Precio de Compra"
+						name="precio_compra_art">
+       
+					</div> 
+					<div>
+					  <input type="text" class="w-full p-3 text-sm border-gray-200 rounded-lg" 
+						placeholder="Precio de Venta"
+						name="precio_venta_art">
+					</div> 
+				  </div>
+		
+				  <div>
+					   <textarea class="w-full p-3 text-sm border-gray-200 rounded-lg"placeholder="Descripcion"rows="4"name="descripcion_art"></textarea>
+				  </div>
+				  	 
+		
+				  <div class="mt-4">
+					  
+					<button
+					  type="submit"
+					  class=" w-1/3 justify-center relative inline-block text-lg font-medium text-white group focus:outline-none focus:ring"
+					>
+					<span class="absolute inset-0 border border-teal-900 group-active:border-teal-900"></span>
+					  <span class="block px-10 py-1 transition-transform bg-teal-800 border border-teal-800 active:border-teal-800 active:bg-teal-800 group-hover:-translate-x-1 group-hover:-translate-y-1"> Enviar </span>
+					</button>
+				  </div>
+				</form>
+			  </div>     
+
+		</div>
+	
+</body>
+</html>
